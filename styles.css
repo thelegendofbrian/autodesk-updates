@@ -1,9 +1,6 @@
 body {
     font-family: Arial, sans-serif;
     background: #f8f9fa;
-/*     display: flex;
-    justify-content: center;
-    align-items: center; */
     margin: 0;
     padding: 0;
 }
@@ -20,7 +17,7 @@ body {
     margin-right: 0.75em;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     border-radius: 5px;
-    padding: 0px;
+    padding: 1em;
     background: white;
 }
 
@@ -39,7 +36,6 @@ body {
     color: white;
     background: #007bff;
     padding: 5px 10px;
-    margin-bottom: 1em;
     border-radius: 5px;
     text-decoration: none;
     width: 100%;
