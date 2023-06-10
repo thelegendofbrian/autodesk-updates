@@ -1,3 +1,5 @@
+// The code remains the same
+
 // Get the div where the products will be displayed
 const productsDiv = document.getElementById('products');
 
@@ -12,15 +14,15 @@ fetch(url)
         for(let item of data) {
             // Create a new div for the product
             let productDiv = document.createElement('div');
-            productDiv.classList.add('product');
+            productDiv.classList.add('product', 'col-lg-4', 'col-md-6', 'mb-4');
 
             // Create a new h2 for the product name
-            let nameH2 = document.createElement('h2');
-            nameH2.textContent = item.name;
+                      let nameH2 = document.createElement('h2');
+            nameH2.textContent = item.displayName;
 
             // Create a new p for the date
             let dateP = document.createElement('p');
-            dateP.textContent = `Date: ${item.date}`;
+            dateP.textContent = `Released ${item.updateReleaseDate}`;
 
             // Create a new a for the hyperlink
             let urlA = document.createElement('a');
