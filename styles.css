@@ -24,6 +24,7 @@ body {
 .product h2 {
     margin-bottom: 0.5em;
     font-size: 18px;
+    text-align: center;
 }
 
 .product p {
