@@ -1,10 +1,11 @@
-// The code remains the same
+const urlParams = new URLSearchParams(window.location.search);
+const year = urlParams.get('year') || '2022'
 
 // Get the div where the products will be displayed
 const productsDiv = document.getElementById('products');
 
 // URL of the endpoint
-const url = "https://script.google.com/macros/s/AKfycbyAsnlDFFIuLL8ZK-qYIvxVwBXJnRQMrl32G7on_r88tg50E1ob8cbXIpp7749MDAdrPA/exec";
+const url = "https://script.google.com/macros/s/AKfycbyAsnlDFFIuLL8ZK-qYIvxVwBXJnRQMrl32G7on_r88tg50E1ob8cbXIpp7749MDAdrPA/exec?year=" + year;
 
 // Use the Fetch API to GET the endpoint
 fetch(url)
