@@ -8,7 +8,7 @@ const productsDiv = document.getElementById('products');
 const url = "https://script.google.com/macros/s/AKfycbyAsnlDFFIuLL8ZK-qYIvxVwBXJnRQMrl32G7on_r88tg50E1ob8cbXIpp7749MDAdrPA/exec?year=" + year;
 
 // Use the Fetch API to GET the endpoint
-fetch(url)
+fetch(url, { mode: 'no-cors' })
     .then(response => response.json())
     .then(data => {
         // Loop through each item in the data array
