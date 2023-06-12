@@ -25,7 +25,7 @@ fetch(url)
 
             // Create a new p for the date
             let dateP = document.createElement('p');
-            dateP.textContent = `Released ${item.updateReleaseDate}`;
+            dateP.textContent = `Build ${item.prodBuild} - Released ${item.updateReleaseDate}`;
 
             // Create a new a for the hyperlink
             let urlA = document.createElement('a');
