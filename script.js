@@ -45,7 +45,6 @@ fetch(url)
             urlB.title = item.longDesc;
             urlB.setAttribute('data-toggle', 'tooltip');
             urlB.setAttribute('data-placement', 'bottom');
-            urlB.tooltip();
 
             // Append the h2, p, and a to the appropriate divs
             productDiv.appendChild(nameH2);
@@ -53,7 +52,6 @@ fetch(url)
             productDiv.appendChild(buttonsDiv);
             buttonsDiv.appendChild(urlA);
             buttonsDiv.appendChild(urlB);
-
 
             // Append the product div to the products div
             productsDiv.appendChild(productDiv);
