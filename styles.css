@@ -44,7 +44,6 @@ body {
     padding: 5px 10px;
     border-radius: 5px;
     text-decoration: none;
-    width: 50%;
     display: flex;
     justify-content: center;
 }
@@ -52,16 +51,18 @@ body {
 .product a.download {
     margin-right: 10px;
     background: #23af00;
+    width: 70%;
 }
 
 .product a.changes {
     background: #007cad;
+    width: 30%;
 }
 
-.product a:hover .download {
+.product a.download:hover {
     background: #1a8300;
 }
 
-.product a:hover .changes {
+.product a.changes:hover {
     background: #00587a;
 }
