@@ -9,9 +9,9 @@ const url = "https://script.google.com/macros/s/AKfycbyAsnlDFFIuLL8ZK-qYIvxVwBXJ
 // const url = "https://script.google.com/macros/s/AKfycbyAsnlDFFIuLL8ZK-qYIvxVwBXJnRQMrl32G7on_r88tg50E1ob8cbXIpp7749MDAdrPA/exec?year=" + year;
 
 // To enable tooltips
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
+$(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip()
+});
 
 // Use the Fetch API to GET the endpoint
 // fetch(url, { mode: 'no-cors' })
