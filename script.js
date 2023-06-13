@@ -42,6 +42,9 @@ fetch(url)
             urlB.classList.add('changes');
             urlB.textContent = 'Changes';
             urlB.href = item.relNotesUrl;
+            urlB.title = item.longDesc;
+            urlB.setAttribute('data-toggle', 'tooltip');
+            urlB.setAttribute('data-placement', 'bottom');
 
             // Append the h2, p, and a to the appropriate divs
             productDiv.appendChild(nameH2);
