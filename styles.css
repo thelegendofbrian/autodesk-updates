@@ -51,18 +51,17 @@ body {
 
 .product a.download {
     margin-right: 10px;
-    background: #5eff36;
+    background: #23af00;
 }
 
 .product a.changes {
-    margin-left: 10px;
-    background: #00b7ff;
+    background: #007cad;
 }
 
 .product a:hover .download {
-    background: #3ba022;
+    background: #1a8300;
 }
 
 .product a:hover .changes {
-    background: #0086bb;
+    background: #00587a;
 }
