@@ -41,7 +41,6 @@ body {
 
 .product a {
     color: white;
-    background: #007bff;
     padding: 5px 10px;
     border-radius: 5px;
     text-decoration: none;
@@ -50,12 +49,12 @@ body {
     justify-content: center;
 }
 
-.product a .download {
+.product a.download {
     margin-right: 10px;
     background: #5eff36;
 }
 
-.product a .changes {
+.product a.changes {
     margin-left: 10px;
     background: #00b7ff;
 }
