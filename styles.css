@@ -33,17 +33,37 @@ body {
     font-style: italic;
 }
 
+.product .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .product a {
     color: white;
     background: #007bff;
     padding: 5px 10px;
     border-radius: 5px;
     text-decoration: none;
-    width: 100%;
+    width: 50%;
     display: flex;
     justify-content: center;
 }
 
-.product a:hover {
-    background: #0056b3;
+.product a .download {
+    margin-right: 10px;
+    background: #5eff36;
+}
+
+.product a .changes {
+    margin-left: 10px;
+    background: #00b7ff;
+}
+
+.product a:hover .download {
+    background: #3ba022;
+}
+
+.product a:hover .changes {
+    background: #0086bb;
 }

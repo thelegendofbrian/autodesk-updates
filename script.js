@@ -20,22 +20,36 @@ fetch(url)
             productDiv.classList.add('product', 'col-lg-4', 'col-md-6', 'mb-4');
 
             // Create a new h2 for the product name
-                      let nameH2 = document.createElement('h2');
+            let nameH2 = document.createElement('h2');
             nameH2.textContent = item.displayName;
 
             // Create a new p for the date
             let dateP = document.createElement('p');
             dateP.textContent = `Build ${item.prodBuild} - Released ${item.updateReleaseDate}`;
 
-            // Create a new a for the hyperlink
+            // Create div for buttons
+            let buttonsDiv = document.createElement('div');
+            buttonsDiv.classList.add('buttons');
+
+            // Create a new a for the download link
             let urlA = document.createElement('a');
+            urlA.classList.add('download');
             urlA.textContent = 'Download';
             urlA.href = item.url;
 
-            // Append the h2, p, and a to the product div
+            // Create a new a for the changelog link
+            let urlB = document.createElement('a');
+            urlB.classList.add('changes');
+            urlB.textContent = 'Changes';
+            urlB.href = item.relNotesUrl;
+
+            // Append the h2, p, and a to the appropriate divs
             productDiv.appendChild(nameH2);
             productDiv.appendChild(dateP);
-            productDiv.appendChild(urlA);
+            productDiv.appendChild(buttonsDiv);
+            buttonsDiv.appendChild(urlA);
+            buttonsDiv.appendChild(urlB);
+
 
             // Append the product div to the products div
             productsDiv.appendChild(productDiv);
