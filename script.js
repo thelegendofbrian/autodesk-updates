@@ -45,6 +45,7 @@ fetch(url)
             urlB.title = item.longDesc;
             urlB.setAttribute('data-toggle', 'tooltip');
             urlB.setAttribute('data-placement', 'bottom');
+            urlB.tooltip();
 
             // Append the h2, p, and a to the appropriate divs
             productDiv.appendChild(nameH2);
@@ -59,8 +60,3 @@ fetch(url)
         }
     })
     .catch(error => console.error(error));
-
-// To enable tooltips
-$(document).ready(function() {
-    $('[data-toggle="tooltip"]').tooltip()
-});
