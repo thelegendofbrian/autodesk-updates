@@ -3,13 +3,12 @@ const year = urlParams.get('year') || '2022'
 
 // Get the div where the products will be displayed
 const productsDiv = document.getElementById('products');
+const spinnerDiv = document.getElementById('spinner');
 
 // URL of the endpoint
-// const url = "https://script.google.com/macros/s/AKfycbyAsnlDFFIuLL8ZK-qYIvxVwBXJnRQMrl32G7on_r88tg50E1ob8cbXIpp7749MDAdrPA/exec";
 const url = "https://script.google.com/macros/s/AKfycbyAsnlDFFIuLL8ZK-qYIvxVwBXJnRQMrl32G7on_r88tg50E1ob8cbXIpp7749MDAdrPA/exec?year=" + year;
 
 // Use the Fetch API to GET the endpoint
-// fetch(url, { mode: 'no-cors' })
 fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -52,6 +51,9 @@ fetch(url)
             productDiv.appendChild(buttonsDiv);
             buttonsDiv.appendChild(urlA);
             buttonsDiv.appendChild(urlB);
+
+            // Remove spinner
+            spinnerDiv.remove();
 
             // Append the product div to the products div
             productsDiv.appendChild(productDiv);
