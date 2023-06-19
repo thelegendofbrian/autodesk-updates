@@ -14,8 +14,12 @@ fetch(url)
     .then(data => {
         if (!data.length) {
             // No updates found
-            let noProducts = document.createElement('h2');
+            let noProducts = document.createElement('p');
             noProducts.textContent = "No updates found for specified year.";
+
+            // Remove spinner
+            spinnerDiv.remove();
+
             productsDiv.appendChild(noProducts);
         } else {
             // Loop through each item in the data array
