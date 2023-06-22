@@ -35,6 +35,10 @@ fetch(url)
                 // Create a new p for the date
                 let dateP = document.createElement('p');
                 dateP.textContent = `Build ${item.prodBuild} - Released ${item.updateReleaseDate}`;
+
+                // Superscripted NEW if date is recent enough
+                let superNew = document.createElement('sup');
+                superNew.textContent = ' NEW';
                 
                 // Create div for buttons
                 let buttonsDiv = document.createElement('div');
@@ -61,6 +65,10 @@ fetch(url)
                 productDiv.appendChild(buttonsDiv);
                 buttonsDiv.appendChild(urlA);
                 buttonsDiv.appendChild(urlB);
+
+                if (isWithinLast30Days(item.updateReleaseDate)) {
+                    dateP.textContent.appendChild(superNew);
+                }
                 
                 // Remove spinner
                 spinnerDiv.remove();
@@ -71,3 +79,16 @@ fetch(url)
         }
     })
     .catch(error => console.error(error));
+
+    function isWithinLast30Days(dateStr) {
+        // Parse the date string
+        var givenDate = new Date(dateStr);
+        var currentDate = new Date();
+    
+        // Get the date 30 days ago
+        var date30DaysAgo = new Date();
+        date30DaysAgo.setDate(currentDate.getDate() - 30);
+    
+        // Check if the given date is between the current date and the date 30 days ago
+        return givenDate <= currentDate && givenDate >= date30DaysAgo;
+    }

@@ -66,3 +66,7 @@ body {
 .product a.changes:hover {
     background: #00587a;
 }
+
+.product sup {
+    color: red;
+}
