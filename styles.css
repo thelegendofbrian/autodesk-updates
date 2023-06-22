@@ -69,4 +69,5 @@ body {
 
 .product sup {
     color: red;
+    font-weight: bold;
 }
