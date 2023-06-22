@@ -67,7 +67,7 @@ fetch(url)
                 buttonsDiv.appendChild(urlB);
 
                 if (isWithinLast30Days(item.updateReleaseDate)) {
-                    dateP.textContent.appendChild(superNew);
+                    dateP.appendChild(superNew);
                 }
                 
                 // Remove spinner
